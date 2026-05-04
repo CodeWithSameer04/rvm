@@ -1,0 +1,197 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #EBE5DF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  padding-top: 70px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5%;
+  background-color: #EBE5DF;
+  z-index: 3000; /* Stays above the overlay */
+  position: relative;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.nav-toggle {
+  font-size: 2rem;
+  color: #143D2A;
+  cursor: pointer;
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 5% 0.8rem;
+}
+
+.nav-links-desktop li a,
+.nav-book-btn {
+  text-decoration: none;
+  color: #143D2A;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links-desktop li a:hover,
+.nav-book-btn:hover {
+  opacity: 0.7;
+}
+
+.nav-links-desktop li.active a {
+  border-bottom: 2px solid #143D2A;
+}
+
+.nav-book-btn {
+  margin-left: auto;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  .nav-header {
+    padding: 1rem 5%; /* Slightly more breathing room on sides */
+  }
+
+  .nav-links-desktop {
+    gap: 1.2rem; /* Squeeze links closer together */
+  }
+
+  .nav-links-desktop li a,
+  .nav-book-btn {
+    font-size: 0.8rem; /* Smaller "petite" text for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-header {
+    padding: 1rem 5%;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #EBE5DF;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(-100%); /* Start off-screen */
+  }
+
+  .mobile-menu-overlay.open {
+    transform: translateY(0); /* Slide down into view */
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .mobile-nav-links li a {
+    text-decoration: none;
+    color: #143D2A;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize; /* Matches "Home", "About" in your image */
+  }
+
+  .mobile-nav-links li.active a {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+
+  .mobile-close-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    color: #143D2A;
+    cursor: pointer;
+  }
+
+  .mobile-book-btn-rect {
+    margin-top: 4rem;
+    background-color: #143D2A;
+    color: #EBE5DF;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+    width: 200px;
+    text-align: center;
+  }
+}
+
+/* Show desktop links on larger screens */
+@media (min-width: 969px) {
+  .nav-toggle,
+  .mobile-menu-overlay {
+    display: none;
+  }
+
+  .nav-links-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

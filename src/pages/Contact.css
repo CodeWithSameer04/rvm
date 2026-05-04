@@ -1,0 +1,134 @@
+.contact-section {
+  padding: 8rem 10%;
+  background-color: #EBE5DF; /* Studio Beige */
+  color: #143D2A; /* Dark Green */
+  font-family: "DM Sans", sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Info on left, Form on right */
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Side Styling */
+.contact-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.contact-subtext {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.detail-item h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-socials a {
+  color: #143D2A;
+  transition: opacity 0.3s ease;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #143D2A; /* Dark green border */
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+  color: #c9d1cc;
+}
+
+.submit-btn {
+  width: fit-content;
+  background-color: #143D2A;
+  color: #EBE5DF;
+  padding: 1rem 3rem;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #1b4d36;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .contact-section {
+    padding: 5rem 5%;
+  }
+
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+}

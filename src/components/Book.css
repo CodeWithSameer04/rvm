@@ -1,0 +1,92 @@
+/* Outer container with the beige background */
+.book-section {
+  padding: 5rem 5%;
+  background-color: #EBE5DF; /* Studio Beige */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The dark green inner banner */
+.book-banner {
+  background-color: #143D2A; /* Studio Dark Green */
+  color: #EBE5DF; /* Beige text */
+  width: 90%; /* Leaves a nice beige border on the left and right edges */
+  max-width: 1200px; /* Allows it to be nice and wide on big screens */
+  padding: 5rem 2rem; /* Perfect, balanced height (top and bottom) */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The Heading */
+.book-heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 3.5rem; /* Big, elegant size */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  color: #EBE5DF;
+  white-space: nowrap; /* Keeps it strictly on one line */
+}
+
+/* The Divider Line */
+.book-divider {
+  width: 100%;
+  max-width: 500px; /* Controls how wide the line stretches */
+  height: 1px;
+  background-color: #EBE5DF;
+  border: none;
+  margin: 0 auto 1.5rem auto;
+  opacity: 0.8;
+}
+
+/* The Subtext */
+.book-subtext {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* The Outlined Button */
+.book-btn {
+  background: transparent;
+  color: #EBE5DF;
+  border: 1px solid #EBE5DF;
+  padding: 0.8rem 2.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: inverts the colors */
+.book-btn:hover {
+  background: #EBE5DF;
+  color: #143D2A;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .book-section {
+    padding: 3rem 5%;
+  }
+
+  .book-banner {
+    width: 100%;
+    padding: 4rem 1.5rem;
+  }
+
+  .book-heading {
+    /* We allow it to stack on mobile, otherwise it would overflow off the screen */
+    white-space: normal; 
+    font-size: 2.2rem;
+  }
+  
+  .book-divider {
+    max-width: 300px;
+  }
+}
